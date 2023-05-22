@@ -271,3 +271,11 @@
     top: 0rem;
   }
 }
+.carousel-img{
+  object-fit: contain;
+      position: relative;
+    /* width: 15rem; */
+    /* left: 7rem; */
+    top: 5rem;
+    align-self: center;
+}
