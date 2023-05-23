@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "framer-motion-carousel";
+import ItemsCarousel from 'react-items-carousel';
 import "./Programs.css";
 import { programsData } from "../../data/programsData";
 import {
@@ -52,16 +53,11 @@ import {
 import RightArrow from "../../assets/rightArrow.png";
 const Programs = () => {
   const carouselRef = React.useRef();
+  const [activeItemIndex, setActiveItemIndex] = React.useState(0);
+  const chevronWidth = 40;
   const imagesArray = [
-    image1,
-    image2,
-    image3,
-    kikla,
     kikla5,
     kikla6,
-    coaches,
-    player,
-    coaches2,
     imageA,
     imageAcc,
     imageAcf,
@@ -98,27 +94,30 @@ const Programs = () => {
     <div className="Programs" id="programs">
       {/* header */}
       <div className="programs-header">
-        <span className="stroke-text">Explore our</span>
+        <span className="stroke-text">Join our</span>
         <span>Programs</span>
         <span className="stroke-text">to shape you</span>
       </div>
 
-      <div className="programs-categories">
-        {/* {programsData.map((program) => (
-          <div className="category">
-            {program.image}
-            <span>{program.heading}</span>
-            <span>{program.details}</span>
-
-            <div className="join-now">
-              <span>Join Now</span>
-              <img src={RightArrow} alt="" />
-            </div>
-          </div>
-        ))} */}
-
-        <Carousel renderDots={null} ref={carouselRef} autoPlay={false}>
-          {imagesArray.map((item, i) => (
+      <div style={{"padding":"0 60px","maxWidth":800,"margin":"0 auto"}}>
+        <ItemsCarousel
+          requestToChangeActive={(value) => setActiveItemIndex(value)}
+          activeItemIndex={activeItemIndex}
+          infiniteLoop={true}
+          gutter={12}
+          activePosition={'center'}
+          disableSwipe={false}
+          alwaysShowChevrons={false}
+          numberOfCards={1}
+          slidesToScroll={1}
+          outsideChevron={true}
+          showSlither={false}
+          firstAndLastGutter={false}
+          leftChevron={<button>{'<'}</button>}
+          rightChevron={<button>{'>'}</button>}
+          chevronWidth={chevronWidth}
+        >
+           {imagesArray.map((item, i) => (
             <div className="category">
               <img
                 src={item}
@@ -130,7 +129,7 @@ const Programs = () => {
               />
             </div>
           ))}
-        </Carousel>
+        </ItemsCarousel>
       </div>
     </div>
   );

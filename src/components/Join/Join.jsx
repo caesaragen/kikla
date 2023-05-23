@@ -33,7 +33,7 @@ const Join = () => {
           <span> LEVEL UP</span>
         </div>
         <div>
-          <span>YOUR BODY</span>
+          <span>YOUR GAME</span>
           <span className="stroke-text"> WITH US?</span>
         </div>
       </div>

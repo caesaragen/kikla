@@ -7,9 +7,9 @@
 .left-r {
   flex: 1 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(4, 2fr); */
   gap: 1rem;
-  grid-auto-rows: 1fr;
+  /* grid-auto-rows: 1fr; */
 }
 
 .left-r>img {

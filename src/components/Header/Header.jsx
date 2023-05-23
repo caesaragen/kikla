@@ -60,7 +60,7 @@ const Header = () => {
             </Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link
               to="plans"
               span={true}
@@ -69,9 +69,9 @@ const Header = () => {
             >
               Plans
             </Link>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <Link
               to="testimonials"
               span={true}
@@ -80,7 +80,7 @@ const Header = () => {
             >
               Testimonials
             </Link>
-          </li>
+          </li> */}
         </ul>
       )}
     </div>

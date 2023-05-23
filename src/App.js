@@ -12,8 +12,8 @@ function App() {
           <Hero />
           <Programs />
           <Reasons />
-          <Plans />
-          <Testimonials />
+          {/* <Plans /> */}
+          {/* <Testimonials /> */}
           <Join />
           <Footer />
     </div>

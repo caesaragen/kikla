@@ -1,5 +1,7 @@
 import React from "react";
 import Carousel from "framer-motion-carousel";
+import ItemsCarousel from 'react-items-carousel';
+import Lottie from "lottie-react";
 import "./Hero.css";
 import Header from "../Header/Header";
 
@@ -7,7 +9,24 @@ import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
-import { image1, image2, image3, kikla, kikla1, kikla2, kikla3, kikla4, kikla5, kikla6, coaches, coaches1, player, coaches2 } from "../../data/kikla_images";
+import Campaign from "../../assets/campaign.jpeg";
+import BBAL from "../../assets/bbal.json"
+import {
+  image1,
+  image2,
+  image3,
+  kikla,
+  kikla1,
+  kikla2,
+  kikla3,
+  kikla4,
+  kikla5,
+  kikla6,
+  coaches,
+  coaches1,
+  player,
+  coaches2,
+} from "../../data/kikla_images";
 
 import { motion } from "framer-motion";
 import NumberCounter from "number-counter";
@@ -15,7 +34,7 @@ const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
   const carouselRef = React.useRef();
-  const imagesArray = [kikla1, kikla3, coaches2, coaches1, player]
+  const imagesArray = [kikla1, kikla3, coaches2, coaches1, player];
   return (
     <div className="hero" id="home">
       <div className="blur hero-blur"></div>
@@ -31,7 +50,8 @@ const Hero = () => {
             transition={{ ...transition, type: "tween" }}
           ></motion.div>
           <span>
-            Developing the best sports and social institutions Internationally</span>
+            Developing the best sports and social institutions Internationally
+          </span>
         </div>
 
         {/* Hero Heading */}
@@ -48,12 +68,17 @@ const Hero = () => {
           <div>
             <span>
               <p>
-                Kikla has its focus on all types of sports in nurturing talents, gifting, and developing skills at an early age.<br></br>
-                The focus is on Basketball at the moment.<br></br> 
-                This is through programs that run throughout the year with a clear mission and vision under Kikla Basketball Club.
+                Kikla has its focus on all types of sports in nurturing talents,
+                gifting, and developing skills at an early age.<br></br>
+                The focus is on Basketball at the moment.<br></br>
+                This is through programs that run throughout the year with a
+                clear mission and vision under Kikla Basketball Club.
               </p>
               <p>
-                However, we have already acquired necessary equipment and staff personnel in other sports like boxing, martial arts, karate, archery, badminton, Pilates, yoga, and many more to be introduced.
+                However, we have already acquired necessary equipment and staff
+                personnel in other sports like boxing, martial arts, karate,
+                archery, badminton, Pilates, yoga, and many more to be
+                introduced.
               </p>
             </span>
           </div>
@@ -91,7 +116,7 @@ const Hero = () => {
       <div className="right-h">
         <button className="btn">Join Now</button>
 
-        <motion.div
+        {/* <motion.div
           className="heart-rate"
           initial={{ right: "-1rem" }}
           whileInView={{ right: "4rem" }}
@@ -100,7 +125,7 @@ const Hero = () => {
           <img src={Heart} alt="Heart" />
           <span>Heart Rate</span>
           <span>116 bpm</span>
-        </motion.div>
+        </motion.div> */}
 
         {/* hero images */}
         {/* <img src={kikla1} alt="hero_image" className="hero-image" /> */}
@@ -129,14 +154,15 @@ const Hero = () => {
         <motion.div
           className="calories"
           initial={{ right: "37rem" }}
-          whileInView={{ right: "28rem" }}
+          whileInView={{ right: "18rem" }}
           transition={transition}
         >
-          <img src={Calories} alt="Calories" />
-          <div>
+          <img src={Campaign} alt="Calories" />
+          {/* <Lottie animationData={BBAL}/> */}
+          {/* <div>
             <span>Calories Burned</span>
             <span>220 kcal</span>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>

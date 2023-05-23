@@ -16,6 +16,7 @@
   flex: 1;
   position: relative;
   background-color: var(--orange);
+  height: 80%;
 }
 
 .the-best-ad {
@@ -160,14 +161,14 @@
   border-radius: 5px;
   padding: 1rem;
   /* width: fit-content; */
-  width: 201px;
+  width: 12rem;
   position: absolute;
-  top: 32rem;
-  right: 28rem;
+  top: 45rem;
+  right: 20rem;
 }
 
 .calories > img {
-  width: 3rem;
+  width: 100%;
 }
 
 .calories > div {
@@ -249,7 +250,7 @@
   }
 
   .calories>img {
-    width: 2rem;
+    width: 12rem;
   }
 
   .calories > div > :nth-child(2) {
